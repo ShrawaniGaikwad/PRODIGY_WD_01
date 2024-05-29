@@ -1,0 +1,112 @@
+.container{
+    position: fixed;
+    z-index: 2;
+    top:0;
+    margin-top: 0.5%;
+    width: 99%;
+    /* height: 15%; */
+    overflow: hidden;
+    background-color:rgb(0, 0, 0);;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  
+  .container a{
+    float:right;
+    color: #ffffff;
+    text-align: left;
+    margin-top:0.5%;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  .container i{
+    float: right;
+    padding: 0px 16px;
+    margin-top: -5px;
+    color: #ffffff;
+  }
+  
+  .menu-item {
+    color: white;
+    margin-right: 50px;
+    text-decoration: none; 
+  }
+  
+  .menu-item:hover {
+    color:#655dff;
+    font-weight: 600;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  
+  .menu-item:hover:before {
+    background: rgb(255, 253, 255);
+    width: 100%;
+    opacity: 0;
+  }
+  
+  .menu-item:before {
+    content: '';
+    width: 0%;
+    height: 100%;
+    opacity: 1;
+    transform: translateX(-50%);
+    background: rgb(255, 255, 255);
+    transition: 50ms;
+    z-index: -1;
+  }
+  .about{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 30px;
+    margin: 100px;
+  }
+  .mycontainer{
+    position: relative;
+    margin-top: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #000000;
+    color: #ffffff;
+    justify-content: center; 
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 30px;
+    margin: 50px;
+    text-align: justify;
+    padding: 50px;
+  }
+  
+
+
+  @media screen and (max-width: 800px) {
+    .container a:not(:first-child) {display: none;float: left;}
+    .container i{
+      display: none;
+    }
+    .container a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  @media screen and (max-width: 800px) {
+    .container p{
+      display: none;
+    }
+    .container.responsive {position: relative;}
+    .container.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .container.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    .container.container.responsive i{
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    
+  }
